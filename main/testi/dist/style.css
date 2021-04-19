@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box; 
+  overflow:auto;
+}
+
+body {
+  font: 2vw 'Ubuntu', sans-serif;
+  width:100%;
+  height: 100%;
+  background:#B11012;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(hsla(0, 15%,15%, 0.5)), to(hsla(0, 15%, 5%,1)));
+  background-image: linear-gradient(to right top, hsla(0, 15%,15%, 0.5), hsla(0, 15%, 5%,1));
+  background-image:-moz-linear-gradient(to right top, hsla(0, 15%,15%, 0.5), hsla(0, 15%, 5%,1));
+
+	
+
+	background-color: rgba(324, 85%, 40%, 1);
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+ 
+
+
+
+
+
+h3{
+  color: hsla(0, 0%, 55%, 1);
+  text-align:center;
+  margin-top:2%;  
+  text-shadow:2px 2px hsla(0,5%,5%,.1), 2px -2px hsla(0,5%,5%,.1);
+}
+button{
+    display: block;
+    text-transform: uppercase;
+    position:relative;
+    margin: 5% auto;
+    width:15%;
+    cursor: pointer;
+    color: hsla(0, 0%, 55%, 1);
+    background: transparent;
+    border: 1px solid hsla(324, 85%, 40%, 1);
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 0;
+    text-shadow:1px 1px hsla(0,5%,5%,.3), 2px 2px hsla(0,5%,5%,.3);
+    overflow:hidden;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+cutton{
+    display: block;
+    text-transform: uppercase;
+    position:relative;
+    margin:5% auto;
+    width:15%;
+    cursor: pointer;
+    color: hsla(152, 95%, 35%, 1);
+    background: transparent;
+    border: 1px solid hsla(152, 95%, 35%, 1);
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1.5vw 2;
+    text-shadow:1px 1px hsla(0,5%,5%,.3), 2px 2px hsla(0,5%,5%,.3);
+    overflow:hidden;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+
+cutton:hover{
+  color:hsla(0, 0%, 15%, .5);
+}
+cutton:focus{
+  color:hsla(0, 0%, 5%, 1);
+
+}
+ button:hover{
+  color:hsla(0, 0%, 15%, .5);
+}
+button:focus{
+  color:hsla(0, 0%, 5%, 1);
+}
+.blob{
+  z-index:-1;
+  position:absolute;
+  width:2px;
+  height:2px;
+  margin-left: 0;
+  margin-top: 0;
+  background:hsla(51, 95%, 65%, 1);
+  border-radius: 50%;
+  border-color:hsla(51, 95%, 65%, 1);
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: border-width 0.7s ease-in-out,margin-left 0.7s ease-in-out,margin-top 0.7s ease-in-out;
+  transition: border-width 0.7s ease-in-out,margin-left 0.7s ease-in-out,margin-top 0.7s ease-in-out;
+}
+.expand{
+  border-color:hsla(51, 95%, 65%, 1);
+  border-width: 300px;
+  border-style: solid;
+  -webkit-transition: border-width 0.7s ease-in-out,margin-left 0.7s ease-in-out,margin-top 0.7s ease-in-out;
+  transition: border-width 0.7s ease-in-out,margin-left 0.7s ease-in-out,margin-top 0.7s ease-in-out;
+  margin-left:-300px;
+  margin-top:-300px;
+}
+.green{
+  border-color:hsla(152, 95%, 35%, 1);
+}
+.pink{
+  border-color:hsla(324, 85%, 40%, 1);
+}

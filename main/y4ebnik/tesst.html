@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Проверка Знаний</title>
+	<link rel="stylesheet" href="../../anim/style.css">
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+	 
+<a href="../../index.html" class="button">На Главную</a>
+	<a href="../../butt/index.html" class="button">На предыдущую</a>
+
+<span style="font-size:12.0pt;margin-left: 50%">
+
+<div class="wrapper">
+	
+
+<div class="skrjs">
+<script type="text/javascript">
+// Заголовок страницы (h1)
+
+// Подзаголовок (h2)
+var subtitle = "Этот тест позволяет оценить Ваши знания";
+// Это ваши вопросы
+var questions=[
+	{
+	text: "Каких логических операторов нет в JavaScript?",
+	answers: ["&&",
+		  "and",
+		  "||"],
+	correctAnswer: 1 // нумерация ответов с нуля!
+},
+	{
+	text: "Можно ли из функции получить доступ к внешним переменным ?(объявленным за пределами функции)?",
+	answers: ["Нет ",
+		  " Да, как на чтение, так и на запись. ",
+		  "Нет такого оператора"],
+	correctAnswer: 1 // нумерация ответов с нуля!
+},
+	{
+	text: " С помощью каких тегов можно добавить скрипт на JavaScript в Html-документ? ",
+	answers: ["program ",
+		  "script",
+		  "javascript"],
+	correctAnswer: 1 // нумерация ответов с нуля!
+},
+	{
+	text: "Чему будет равен результат выражения 7++?",
+	answers: ["8",
+		  "7",
+		  "Будет ошибка, т.к этот оператор применим только к переменным"],
+	correctAnswer: 2 // нумерация ответов с нуля!
+},
+	{
+	text: "Как определяется истинность/ложность условного выражения?",
+	answers: ["Выражение вычисляется и приводится к числу, если получившееся значение не ноль, то результат - истина, иначе – ложь.",
+		  "Выражение вычисляется, и полученное значение приводится к логическому типу.",
+		  "Вычисления в условном выражении не допускаются, поэтому могут быть использованы только переменные и значения логического типа."],
+	correctAnswer: 0 // нумерация ответов с нуля!
+},
+	{
+	text: "Когда при использовании тернарного оператора условное выражение необходимо помещать в скобки?",
+	answers: ["В скобки всегда необходимо помещать сложные условные выражения, состоящие из нескольких операторов сравнения.",
+		  "Обычно в скобках нет необходимости, они могут понадобиться, если в условном выражении есть операторы с более низким приоритетом, чем «вопросительный знак».!",
+		  "При использовании этого оператора скобки не допускаются"],
+	correctAnswer: 1 // нумерация ответов с нуля!
+},
+	{
+	text: "Для чего используется инструкция break в блоке switch? ",
+	answers: ["Для немедленного перехода к проверке следующего условия",
+		  "Для выхода из блока switch",
+		  "Инструкция Break используется только в циклах"],
+	correctAnswer: 0 // нумерация ответов с нуля!
+},
+{
+	text: "Что делает оператор ===?:",
+	answers: ["Сравнивает без приведения типа",
+		  "Проверяет правильность введённых данных",
+		  "Нет такого оператора"],
+	correctAnswer: 0 // нумерация ответов с нуля!
+},
+{
+	text: "Язык JavaScript является подвидом языка Java — верно?:",
+	answers: ["Да",
+		  "Нет",
+		  "Наоборот, Java – подвид JavaScript"],
+	correctAnswer: 1
+},
+{
+	text: "Какие функции выполняет JS?:",
+	answers: ["Отвечает за функции на стороне клиента",
+		  "Создает разметку на странице сайта",
+		  "Отвечает за работу с базами данных"],
+	correctAnswer: 0
+}
+	
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+"\n    Правильный ответ: " +
+		questions[i].answers[questions[i].correctAnswer] + "\n";
+	  }
+        else{
+	    answerText=answerText+": Верно! \n";
+	    ++score;
+	    }
+       }
+
+   answerText=answerText+"\nВсего правильных ответов: "+score+"\n";
+
+   alert(answerText);
+   yourAns = [];
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+</div>
+<style>
+span.quest {font-weight: bold;}
+</style>
+
+<h1><script>document.write(title)</script></h1>
+<h2><script>document.write(subtitle)</script></h2>
+
+<form name="quiz">
+<ol>
+<script>
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var idx = 1 + q;
+
+   document.writeln('<li><span class="quest">' + question.text + '</span><br/>');
+   for(var i in question.answers) {
+	document.writeln('<input type=radio name="q' + idx + '" value="' + i +
+	'" onClick="Engine(' + q + ', this.value)">' + question.answers[i] + '<br/>');
+}
+}
+</script>
+</ol>
+<input type="button" onClick="Score()" value="Проверить результаты" />
+
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,600|Roboto:300,400,700');
+header, footer {
+  background-color: #38b6ff;
+}
+.navbar-brand {
+  font-size: px;
+  font-weight: 600;
+}
+.nav-link, .dropdown-item {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+nav li {
+  padding: 0 18px;
+}
+nav li.active, nav li.active:before {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+footer i {
+  color: #fff;
+  padding: 0 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+}
+.h3 {
+	 font-family: 'Barlow Semi Condensed', sans-serif;
+	  font-weight: 200;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+a.btn, button {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+	 display: block;
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 3s ease-in-out infinite;
+  -webkit-animation: gradient 3s ease-in-out infinite;
+  animation: gradient 3s ease-in-out infinite;
+}
+  
+

@@ -1,0 +1,37 @@
+.skrjs{
+	display:flex;
+	justify-content: center;
+}
+.wrapper {
+opacity: 0.85;
+    width:40%;
+  height:1000px;
+    margin:0 auto;
+border-radius: 5px;
+  background: linear-gradient(to top left, #cc99ff 0%, #ff99cc 100%);
+
+}
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  width: 10em;
+  height: 1.5em;
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: #fff;
+  outline: none;
+  border: 2px solid #563A33;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+  background: linear-gradient(#C3998C, #A8513E 48%, #AC2C20 52%, #56251F);
+}
+.button:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
